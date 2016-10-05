@@ -1,6 +1,6 @@
 {
   "name": "koa-history-api-fallback",
-  "version": "0.1.2",
+  "version": "2.0.0",
   "description": "Provides a fallback for non-existing directories so that the HTML 5 history API can be used for Koa.",
   "keyswords": [
     "koa",
@@ -11,22 +11,26 @@
     "spa"
   ],
   "engines": {
-    "node": ">=0.8"
+    "node": ">= 4"
   },
   "main": "lib/index.js",
-  "scripts": {},
+  "scripts": {
+    "build": "babel -d lib src",
+    "lint": "standard src/*.js | snazzy"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/dalhorinek/koa-history-api-fallback.git"
   },
-  "author": {
-    "name": "Dalibor Horinek",
-    "email": "dal@horinek.net",
-    "url": "http://www.horinek.net"
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.16.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-latest": "^6.16.0",
+    "snazzy": "^5.0.0",
+    "standard": "^8.3.0"
   },
-  "contributors": [
-    "Ben Ripkens <bripkens.dev@gmail.com> (http://bripkens.de)",
-    "Craig Myles <cr@igmyles.com> (http://www.craigmyles.com)"
-  ],
-  "license": "MIT"
+  "files": [
+    "lib"
+  ]
 }
