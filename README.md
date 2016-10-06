@@ -1,8 +1,8 @@
 # @overra/koa-history-api-fallback
 Koa v2 implementation of [connect-history-api-fallback](https://github.com/bripkens/connect-history-api-fallback)
 
-[![npm](https://img.shields.io/npm/v/@overra/koa-history-api-fallback.svg?maxAge=2592000)]()
-[![David](https://img.shields.io/david/dev/overra/koa-history-api-fallback.svg?maxAge=2592000)]()
+[![npm](https://img.shields.io/npm/v/@overra/koa-history-api-fallback.svg?maxAge=3600)]()
+[![David](https://img.shields.io/david/dev/overra/koa-history-api-fallback.svg?maxAge=3600)]()
 
 ## Introduction
 
