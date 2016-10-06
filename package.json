@@ -1,5 +1,5 @@
 {
-  "name": "koa-history-api-fallback",
+  "name": "@overra/koa-history-api-fallback",
   "version": "2.0.0",
   "description": "Provides a fallback for non-existing directories so that the HTML 5 history API can be used for Koa.",
   "keyswords": [
@@ -16,19 +16,25 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "babel -d lib src",
-    "lint": "standard src/*.js | snazzy"
+    "lint": "standard src/*.js | snazzy",
+    "prepublish": "npm run lint && npm run build",
+    "postpublish": "greenkeeper-postpublish"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/dalhorinek/koa-history-api-fallback.git"
+    "url": "https://github.com/overra/koa-history-api-fallback.git"
   },
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.16.0",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-preset-latest": "^6.16.0",
+    "greenkeeper-postpublish": "^1.0.1",
     "snazzy": "^5.0.0",
     "standard": "^8.3.0"
+  },
+  "peerDependencies": {
+    "koa": "2.x"
   },
   "files": [
     "lib"
