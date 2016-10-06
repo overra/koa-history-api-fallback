@@ -11,16 +11,16 @@ export default (options = {}) => {
 
     if (method !== 'GET') {
       log(`${skip} because the method is not GET.`)
-      await next
+      return await next()
     } else if (!headers || typeof headers.accept !== 'string') {
       log(`${skip} because the client did not send an HTTP accept header.`)
-      await next
+      return await next()
     } else if (headers.accept.indexOf('application/json') === 0) {
       log(`${skip} because the client prefers JSON.`)
-      await next
+      return await next()
     } else if (!acceptsHtml(headers.accept)) {
       log(`${skip} because the client does not accept HTML.`)
-      await next
+      return await next()
     }
 
     const parsedUrl = parse(url)
@@ -34,20 +34,20 @@ export default (options = {}) => {
         rewriteTarget = evaluateRewriteRule(parsedUrl, match, rewrite.to)
         log(`Rewriting ${method} ${url} to ${rewriteTarget}`)
         ctx.req.url = rewriteTarget
-        await next
+        return await next()
       }
     }
 
     if (parsedUrl.pathname.includes('.')) {
       log(`${skip} because the path includes a dot (.) character.`)
-      await next
+      return await next()
     }
 
     rewriteTarget = options.index || '/index.html'
     log(`Rewriting ${method} ${url} to ${rewriteTarget}`)
     ctx.req.url = rewriteTarget
 
-    await next
+    return await next()
   }
 }
 
