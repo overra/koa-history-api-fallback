@@ -1,6 +1,6 @@
 {
   "name": "@overra/koa-history-api-fallback",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Provides a fallback for non-existing directories so that the HTML 5 history API can be used for Koa.",
   "keyswords": [
     "koa",
