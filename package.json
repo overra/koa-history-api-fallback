@@ -26,7 +26,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "babel-cli": "^6.16.0",
+    "babel-cli": "^6.18.0",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-preset-latest": "^6.16.0",
     "greenkeeper-postpublish": "^1.0.1",
