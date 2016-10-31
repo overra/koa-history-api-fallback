@@ -31,7 +31,7 @@
     "babel-preset-latest": "^6.16.0",
     "greenkeeper-postpublish": "^1.0.1",
     "snazzy": "^5.0.0",
-    "standard": "^8.3.0"
+    "standard": "^8.4.0"
   },
   "peerDependencies": {
     "koa": "2.x"
